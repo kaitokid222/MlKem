@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MlKemNet", "src\MlKemNet\MlKemNet.csproj", "{A41833CB-2DAE-49E7-A902-A847405535C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MlKemNet.Tests", "tests\MlKemNet.Tests\MlKemNet.Tests.csproj", "{5F0A8204-2D4C-49C2-97CA-A983A8668A92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A41833CB-2DAE-49E7-A902-A847405535C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41833CB-2DAE-49E7-A902-A847405535C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41833CB-2DAE-49E7-A902-A847405535C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41833CB-2DAE-49E7-A902-A847405535C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F0A8204-2D4C-49C2-97CA-A983A8668A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F0A8204-2D4C-49C2-97CA-A983A8668A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F0A8204-2D4C-49C2-97CA-A983A8668A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F0A8204-2D4C-49C2-97CA-A983A8668A92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F03C60B0-BC0A-43F9-B678-70BC352BB754}
+	EndGlobalSection
+EndGlobal

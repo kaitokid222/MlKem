@@ -1,0 +1,72 @@
+## TASK-001 — Establish the safe Codex workbench
+
+- Added `.gitignore` — Mirrored the repository ignore rules so generated and local files stay outside the handoff.
+- Added `LICENSE` — Mirrored the repository license so the workbench represents the complete future repository.
+- Added `README.md` — Mirrored the repository introduction as the baseline for the scaffold documentation.
+- Added `AGENTS.md` — Established permanent workspace, Git, cryptographic, source, and task-log boundaries.
+- Added `.codex/config.toml` — Restricted Codex to workspace-scoped writes with on-request approval.
+- Added `docs/DESIGN_LOG.md` — Started the required file-by-file task patchlog.
+
+## TASK-002 — Create the initial ML-KEM scaffold
+
+- Added `.editorconfig` — Standardized line endings, indentation, and C# style for cross-platform formatting.
+- Added `.github/workflows/ci.yml` — Added SHA-pinned Windows and Ubuntu verification for restore, format, build, and tests.
+- Added `Directory.Build.props` — Centralized nullable analysis, SDK analyzers, warning policy, deterministic builds, and lockfiles.
+- Added `Directory.Packages.props` — Centrally pinned the xUnit v3 Microsoft Testing Platform v2 package.
+- Added `global.json` — Required .NET 10.0.100 or a later .NET 10 feature band and selected Microsoft Testing Platform.
+- Modified `MlKemNet.sln` — Repointed the library to `src` and added the structural test project.
+- Modified `README.md` — Documented the non-functional MAGIC status, requirements, layout purpose, and verification commands.
+- Modified `docs/DESIGN_LOG.md` — Recorded the complete TASK-002 patch manifest and rationale.
+- Added `docs/FIPS203.md` — Documented the standard baseline, errata state, parameters, algorithm map, and ACVP policy.
+- Added `src/MlKemNet/MlKemNet.csproj` — Created the non-packable .NET 10 library project with XML documentation.
+- Added `src/MlKemNet/packages.lock.json` — Locked the library restore graph for .NET 10.
+- Added `src/MlKemNet/IKem.cs` — Defined the reviewed public KEM operation contract with FIPS terminology.
+- Added `src/MlKemNet/MlKem512.cs` — Added parameterless ML-KEM-512 public Algorithm 19–21 MAGIC stubs.
+- Added `src/MlKemNet/MlKem768.cs` — Added parameterless ML-KEM-768 public Algorithm 19–21 MAGIC stubs.
+- Added `src/MlKemNet/MlKem1024.cs` — Added parameterless ML-KEM-1024 public Algorithm 19–21 MAGIC stubs.
+- Added `src/MlKemNet/Models/KeyPair.cs` — Added the public encapsulation and decapsulation key result model.
+- Added `src/MlKemNet/Models/EncapsulationResult.cs` — Added the public ciphertext and shared-secret result model.
+- Added `src/MlKemNet/Properties/AssemblyInfo.cs` — Exposed internal scaffold shapes only to the structural test assembly.
+- Added `src/MlKemNet/Internal/Constants.cs` — Recorded the fixed degree, modulus, and shared-secret size.
+- Added `src/MlKemNet/Internal/MlKemParameters.cs` — Defined the immutable internal parameter-set shape.
+- Added `src/MlKemNet/Internal/MlKemParameterSets.cs` — Recorded all three FIPS parameter sets and encoded sizes.
+- Added `src/MlKemNet/Internal/Polynomial.cs` — Added the distinct 256-coefficient ordinary polynomial container.
+- Added `src/MlKemNet/Internal/NttPolynomial.cs` — Added the distinct 256-coefficient NTT-domain polynomial container.
+- Added `src/MlKemNet/Internal/BitCodec.cs` — Added documented MAGIC stubs for FIPS Algorithms 3 and 4.
+- Added `src/MlKemNet/Internal/ByteCodec.cs` — Added documented MAGIC stubs for FIPS Algorithms 5 and 6.
+- Added `src/MlKemNet/Internal/Compression.cs` — Added documented MAGIC stubs for normative compression helpers.
+- Added `src/MlKemNet/Internal/Sampling.cs` — Added documented MAGIC stubs for FIPS Algorithms 7 and 8.
+- Added `src/MlKemNet/Internal/Ntt.cs` — Added documented MAGIC stubs for FIPS Algorithms 9 through 12.
+- Added `src/MlKemNet/Internal/HashFunctions.cs` — Added documented MAGIC stubs for the normative hash, PRF, and XOF functions.
+- Added `src/MlKemNet/Internal/PkeKeyPair.cs` — Added the internal K-PKE encryption and decryption key container.
+- Added `src/MlKemNet/Internal/KPke.cs` — Added documented MAGIC stubs for FIPS Algorithms 13 through 15.
+- Added `src/MlKemNet/Internal/MlKemInternal.cs` — Added documented deterministic MAGIC stubs for FIPS Algorithms 16 through 18.
+- Added `src/MlKemNet/Internal/InputValidation.cs` — Added documented MAGIC stubs for normative encapsulation and decapsulation input checks.
+- Added `tests/MlKemNet.Tests/MlKemNet.Tests.csproj` — Created the .NET 10 xUnit v3 Microsoft Testing Platform v2 test project.
+- Added `tests/MlKemNet.Tests/packages.lock.json` — Locked the complete test dependency graph for .NET 10.
+- Added `tests/MlKemNet.Tests/PublicApiTests.cs` — Added non-cryptographic tests for constructors, interfaces, signatures, and FIPS naming.
+- Added `tests/MlKemNet.Tests/Internal/ParameterSetTests.cs` — Added non-cryptographic tests for constants, parameters, and encoded sizes.
+- Added `tests/MlKemNet.Tests/Internal/PolynomialShapeTests.cs` — Added non-cryptographic tests for distinct fixed-size polynomial containers.
+- Added `tests/MlKemNet.Tests/Algorithms/ConversionTests.cs` — Reserved skipped test slots for FIPS Algorithms 3 through 6.
+- Added `tests/MlKemNet.Tests/Algorithms/SamplingTests.cs` — Reserved skipped test slots for FIPS Algorithms 7 and 8.
+- Added `tests/MlKemNet.Tests/Algorithms/NttTests.cs` — Reserved skipped test slots for FIPS Algorithms 9 through 12.
+- Added `tests/MlKemNet.Tests/Algorithms/KPkeTests.cs` — Reserved skipped test slots for FIPS Algorithms 13 through 15.
+- Added `tests/MlKemNet.Tests/Algorithms/MlKemInternalTests.cs` — Reserved skipped test slots for FIPS Algorithms 16 through 18.
+- Added `tests/MlKemNet.Tests/Algorithms/PublicKemTests.cs` — Reserved skipped test slots for FIPS Algorithms 19 through 21.
+- Added `tests/MlKemNet.Tests/Acvp/AcvpVectorModels.cs` — Added DTOs for NIST ACVP prompt and expected-result vector sets.
+- Added `tests/MlKemNet.Tests/Acvp/AcvpVectorLoader.cs` — Added a JSON loader for future pinned ACVP vector files.
+- Added `tests/MlKemNet.Tests/Acvp/AcvpTests.cs` — Reserved skipped ACVP keyGen, encapDecap, and key-validation test slots.
+- Added `tests/MlKemNet.Tests/TestVectors/README.md` — Documented the fixed-release and hash-recording policy for future NIST vectors.
+- Deleted `MlKemNet/MlKemNet.csproj` — Removed the superseded .NET 8 project definition from the handoff tree.
+- Deleted `MlKemNet/IKem.cs` — Removed the superseded interface with non-FIPS operation names.
+- Deleted `MlKemNet/MlKem.cs` — Removed the unnecessary public abstract base class.
+- Deleted `MlKemNet/MlKem512.cs` — Removed the superseded ML-KEM-512 class from the old layout.
+- Deleted `MlKemNet/MlKem768.cs` — Removed the superseded non-parameterless ML-KEM-768 class.
+- Deleted `MlKemNet/MlKem1024.cs` — Removed the superseded non-parameterless ML-KEM-1024 class.
+- Deleted `MlKemNet/Models/KeyPair.cs` — Removed the result model with public/private key terminology.
+- Deleted `MlKemNet/Models/EncapsulationResult.cs` — Removed the result model with inconsistent ciphertext and shared-secret names.
+- Deleted `MlKemNet/Internal/ByteCodec.cs` — Removed the unscoped legacy byte-codec stubs.
+- Deleted `MlKemNet/Internal/Constants.cs` — Removed the legacy constants file from the old layout.
+- Deleted `MlKemNet/Internal/MlKemParameters.cs` — Removed the publicly visible mutable legacy parameter type.
+- Deleted `MlKemNet/Internal/MlKemParameterSets.cs` — Removed the legacy parameter sets without encoded sizes.
+- Deleted `MlKemNet/Internal/Polynomial.cs` — Removed the publicly visible legacy polynomial container.
