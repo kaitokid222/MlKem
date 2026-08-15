@@ -70,3 +70,8 @@
 - Deleted `MlKemNet/Internal/MlKemParameters.cs` — Removed the publicly visible mutable legacy parameter type.
 - Deleted `MlKemNet/Internal/MlKemParameterSets.cs` — Removed the legacy parameter sets without encoded sizes.
 - Deleted `MlKemNet/Internal/Polynomial.cs` — Removed the publicly visible legacy polynomial container.
+
+## TASK-003 — Enforce cross-platform line endings
+
+- Added `.gitattributes` — Forced Git text checkouts to LF so Windows CI matches the repository formatting policy.
+- Modified `docs/DESIGN_LOG.md` — Recorded the cross-platform CI correction and its affected files.
