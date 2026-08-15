@@ -75,3 +75,8 @@
 
 - Added `.gitattributes` — Forced Git text checkouts to LF so Windows CI matches the repository formatting policy.
 - Modified `docs/DESIGN_LOG.md` — Recorded the cross-platform CI correction and its affected files.
+
+## TASK-004 — Verify BitCodec conversions
+
+- Modified `tests/MlKemNet.Tests/Algorithms/ConversionTests.cs` — Added FIPS example and byte round-trip coverage for Algorithms 3 and 4.
+- Modified `docs/DESIGN_LOG.md` — Recorded the BitCodec conversion test changes.

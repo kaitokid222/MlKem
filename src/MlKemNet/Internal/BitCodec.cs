@@ -10,7 +10,28 @@ internal static class BitCodec
     /// <returns>The encoded bytes.</returns>
     internal static byte[] BitsToBytes(ReadOnlySpan<byte> bits)
     {
-        throw new NotImplementedException();
+        if (bits.Length % 8 != 0)
+        {
+            throw new ArgumentException(
+                "The bit array length must be a multiple of eight.",
+                nameof(bits));
+        }
+
+        var bytes = new byte[bits.Length / 8];
+
+        for (var i = 0; i < bits.Length; i++)
+        {
+            if (bits[i] > 1)
+            {
+                throw new ArgumentException(
+                    "The bit array may only contain 0 or 1.",
+                    nameof(bits));
+            }
+
+            bytes[i / 8] |= (byte)(bits[i] << (i % 8));
+        }
+
+        return bytes;
     }
 
     /// <summary>
@@ -21,7 +42,17 @@ internal static class BitCodec
     /// <returns>The decoded bits.</returns>
     internal static byte[] BytesToBits(ReadOnlySpan<byte> bytes)
     {
-        throw new NotImplementedException();
+        var bits = new byte[bytes.Length * 8];
+
+        for (var i = 0; i < bytes.Length; i++)
+        {
+            for (var j = 0; j < 8; j++)
+            {
+                bits[(8 * i) + j] = (byte)((bytes[i] >> j) & 1);
+            }
+        }
+
+        return bits;
     }
 }
 
