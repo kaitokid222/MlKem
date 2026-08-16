@@ -80,3 +80,8 @@
 
 - Modified `tests/MlKemNet.Tests/Algorithms/ConversionTests.cs` — Added FIPS example and byte round-trip coverage for Algorithms 3 and 4.
 - Modified `docs/DESIGN_LOG.md` — Recorded the BitCodec conversion test changes.
+
+## TASK-005 — Verify ByteCodec conversions
+
+- Modified `tests/MlKemNet.Tests/Algorithms/ConversionTests.cs` — Added FIPS range, bit-order, round-trip, reduction, and argument coverage for Algorithms 5 and 6.
+- Modified `docs/DESIGN_LOG.md` — Recorded the ByteCodec conversion test changes.
