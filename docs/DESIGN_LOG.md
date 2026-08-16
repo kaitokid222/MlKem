@@ -85,3 +85,26 @@
 
 - Modified `tests/MlKemNet.Tests/Algorithms/ConversionTests.cs` — Added FIPS range, bit-order, round-trip, reduction, and argument coverage for Algorithms 5 and 6.
 - Modified `docs/DESIGN_LOG.md` — Recorded the ByteCodec conversion test changes.
+
+## TASK-006 — Integrate the Waher FIPS 202 provider
+
+- Modified `MlKemNet.Fips202/IFips202.cs` — Documented the one-shot and incremental FIPS 202 contract.
+- Modified `MlKemNet.Fips202/IXofContext.cs` — Documented the absorb-then-squeeze lifecycle.
+- Added `MlKemNet.Fips202/Fips202Provider.cs` — Mapped one-shot FIPS 202 calls to Waher.Security.SHA3.
+- Added `MlKemNet.Fips202/WaherShake128Context.cs` — Adapted Waher's stateful SHAKE128 context for repeated squeezing.
+- Modified `tests/MlKemNet.Tests/MlKemNet.Tests.csproj` — Added the direct FIPS 202 test dependency.
+- Added `tests/MlKemNet.Tests/Fips202/Fips202ProviderTests.cs` — Added official NIST CAVP vectors and XOF lifecycle coverage.
+- Modified `tests/MlKemNet.Tests/Algorithms/SamplingTests.cs` — Added the Algorithm 7 provider integration check.
+- Modified `tests/MlKemNet.Tests/packages.lock.json` — Locked the direct FIPS 202 test dependency graph.
+- Modified `docs/DESIGN_LOG.md` — Recorded the Waher integration and verification files.
+
+## TASK-007 — Document the Waher dependency
+
+- Modified `README.md` — Documented the FIPS 202 provider, verification scope, and upstream dependency.
+- Added `THIRD_PARTY_NOTICES.md` — Recorded the Waher package attribution and applicable license source.
+- Modified `docs/DESIGN_LOG.md` — Recorded the documentation changes for the third-party dependency.
+
+## TASK-008 — Verify centered binomial sampling
+
+- Modified `tests/MlKemNet.Tests/Algorithms/SamplingTests.cs` — Added FIPS boundary, range, bit-pattern, and argument coverage for Algorithm 8.
+- Modified `docs/DESIGN_LOG.md` — Recorded the Algorithm 8 test changes.

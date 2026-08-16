@@ -58,6 +58,36 @@
         "resolved": "5.0.0",
         "contentHash": "dDoKi0PnDz31yAyETfRntsLArTlVAVzUzCIvvEDsDsucrl33Dl8pIJG06ePTJTI3tGpeyHS9Cq7Foc/s4EeKcg=="
       },
+      "Waher.Events": {
+        "type": "Transitive",
+        "resolved": "1.4.5",
+        "contentHash": "B8XqVjyFosxHVoMTVoAYCOTPglQFn9LUkW6D4Ax6ZORcWaCM2uRgyV9Y/gpmN/a3+deqSHwoYubMgdMIU99ogA==",
+        "dependencies": {
+          "Waher.Runtime.Collections": "1.0.3"
+        }
+      },
+      "Waher.Runtime.Collections": {
+        "type": "Transitive",
+        "resolved": "1.0.3",
+        "contentHash": "HHS8FVr0RfJ2Ie+kIZYVUZJGIKJO/GUWMmXxBVQK2D7i4m6O7NmCJ4hU888TmuyGFkOZQlRniqv2a/gFDYBpSQ=="
+      },
+      "Waher.Runtime.Inventory": {
+        "type": "Transitive",
+        "resolved": "1.4.5",
+        "contentHash": "EhaEgo9SUhEdqEu3yI6X8t0GXxNgxstDcEk52DRE0Ba+HcHfOgOIxQA4aW2pDhz4hfUcP7FbWAXXCKIGv/0XlQ==",
+        "dependencies": {
+          "Waher.Events": "1.4.5",
+          "Waher.Runtime.Collections": "1.0.3"
+        }
+      },
+      "Waher.Runtime.IO": {
+        "type": "Transitive",
+        "resolved": "1.0.6",
+        "contentHash": "gmCBve1OSYZWlIH5YCP+BzdUmqMGxAxmfwz6lBhzDiCneSY5qmiTE/XNNskjS5D2GVvDqzlgUHWMJBI3JsRihA==",
+        "dependencies": {
+          "Waher.Runtime.Inventory": "1.4.5"
+        }
+      },
       "xunit.analyzers": {
         "type": "Transitive",
         "resolved": "1.27.0",
@@ -116,7 +146,26 @@
         }
       },
       "mlkemnet": {
-        "type": "Project"
+        "type": "Project",
+        "dependencies": {
+          "MlKemNet.Fips202": "[1.0.0, )"
+        }
+      },
+      "mlkemnet.fips202": {
+        "type": "Project",
+        "dependencies": {
+          "Waher.Security.SHA3": "[1.2.2, )"
+        }
+      },
+      "Waher.Security.SHA3": {
+        "type": "CentralTransitive",
+        "requested": "[1.2.2, )",
+        "resolved": "1.2.2",
+        "contentHash": "6J6RLky2QvRo6duEeRmrDHFoGP1b2BZ1JJYKLwbsZdbISORrgPujnk2rjRMzwCTiCcI0qnfTIfYOnO44AAflPA==",
+        "dependencies": {
+          "Waher.Runtime.IO": "1.0.6",
+          "Waher.Runtime.Inventory": "1.4.5"
+        }
       }
     }
   }

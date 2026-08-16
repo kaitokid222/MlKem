@@ -2,6 +2,16 @@
   "version": 2,
   "dependencies": {
     "net10.0": {
+      "Waher.Security.SHA3": {
+        "type": "Direct",
+        "requested": "[1.2.2, )",
+        "resolved": "1.2.2",
+        "contentHash": "6J6RLky2QvRo6duEeRmrDHFoGP1b2BZ1JJYKLwbsZdbISORrgPujnk2rjRMzwCTiCcI0qnfTIfYOnO44AAflPA==",
+        "dependencies": {
+          "Waher.Runtime.IO": "1.0.6",
+          "Waher.Runtime.Inventory": "1.4.5"
+        }
+      },
       "Waher.Events": {
         "type": "Transitive",
         "resolved": "1.4.5",
@@ -29,22 +39,6 @@
         "resolved": "1.0.6",
         "contentHash": "gmCBve1OSYZWlIH5YCP+BzdUmqMGxAxmfwz6lBhzDiCneSY5qmiTE/XNNskjS5D2GVvDqzlgUHWMJBI3JsRihA==",
         "dependencies": {
-          "Waher.Runtime.Inventory": "1.4.5"
-        }
-      },
-      "mlkemnet.fips202": {
-        "type": "Project",
-        "dependencies": {
-          "Waher.Security.SHA3": "[1.2.2, )"
-        }
-      },
-      "Waher.Security.SHA3": {
-        "type": "CentralTransitive",
-        "requested": "[1.2.2, )",
-        "resolved": "1.2.2",
-        "contentHash": "6J6RLky2QvRo6duEeRmrDHFoGP1b2BZ1JJYKLwbsZdbISORrgPujnk2rjRMzwCTiCcI0qnfTIfYOnO44AAflPA==",
-        "dependencies": {
-          "Waher.Runtime.IO": "1.0.6",
           "Waher.Runtime.Inventory": "1.4.5"
         }
       }

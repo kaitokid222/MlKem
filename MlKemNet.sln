@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12106.202 insiders
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MlKemNet", "src\MlKemNet\MlKemNet.csproj", "{A41833CB-2DAE-49E7-A902-A847405535C0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MlKemNet.Tests", "tests\MlKemNet.Tests\MlKemNet.Tests.csproj", "{5F0A8204-2D4C-49C2-97CA-A983A8668A92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MlKemNet.Fips202", "MlKemNet.Fips202\MlKemNet.Fips202.csproj", "{7E38D23A-6965-4E8E-B3C6-D55536DE8D04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5F0A8204-2D4C-49C2-97CA-A983A8668A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F0A8204-2D4C-49C2-97CA-A983A8668A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F0A8204-2D4C-49C2-97CA-A983A8668A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E38D23A-6965-4E8E-B3C6-D55536DE8D04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E38D23A-6965-4E8E-B3C6-D55536DE8D04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E38D23A-6965-4E8E-B3C6-D55536DE8D04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E38D23A-6965-4E8E-B3C6-D55536DE8D04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

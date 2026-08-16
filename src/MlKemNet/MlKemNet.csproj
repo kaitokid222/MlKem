@@ -6,5 +6,8 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MlKemNet.Fips202\MlKemNet.Fips202.csproj" />
+  </ItemGroup>
 </Project>
 

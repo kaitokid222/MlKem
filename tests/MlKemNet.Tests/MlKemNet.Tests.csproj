@@ -8,7 +8,7 @@
     <PackageReference Include="xunit.v3.mtp-v2" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\MlKemNet.Fips202\MlKemNet.Fips202.csproj" />
     <ProjectReference Include="..\..\src\MlKemNet\MlKemNet.csproj" />
   </ItemGroup>
 </Project>
-
